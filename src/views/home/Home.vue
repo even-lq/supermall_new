@@ -32,30 +32,6 @@
       <li>列表23</li>
       <li>列表24</li>
       <li>列表25</li>
-      <li>列表26</li>
-      <li>列表27</li>
-      <li>列表28</li>
-      <li>列表29</li>
-      <li>列表30</li>
-      <li>列表31</li>
-      <li>列表32</li>
-      <li>列表33</li>
-      <li>列表34</li>
-      <li>列表35</li>
-      <li>列表36</li>
-      <li>列表37</li>
-      <li>列表38</li>
-      <li>列表39</li>
-      <li>列表40</li>
-      <li>列表41</li>
-      <li>列表42</li>
-      <li>列表43</li>
-      <li>列表44</li>
-      <li>列表45</li>
-      <li>列表46</li>
-      <li>列表47</li>
-      <li>列表48</li>
-      <li>列表49</li>
       <li>列表50</li>
     </ul>
   </div>
@@ -90,14 +66,14 @@
           'pop': {page: 0, list: []},
           'new': {page: 0, list: []},
           'sell': {page: 0, list: []}
-
         }
       }
     },
     created() {
       this.getMultiData()
 
-      this.getHomeGoods('pop')
+      this.getHomeGoods('pop', 1).then(res => {
+        console.log(res);})
       this.getHomeGoods('new')
       this.getHomeGoods('sell')
     },
